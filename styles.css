@@ -1,0 +1,277 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.banner {
+    background: linear-gradient(to right, #63a28e, #acb783);
+    color: white;
+    text-align: center;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Blog Listings Section */
+.blog-listings {
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+.blog-listings h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;   
+}
+.featured-blogs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+h2 {
+    text-align: center; /* Centers the text horizontally */
+    margin-bottom: 30px; /* Space below the heading */
+}
+.blog-card {
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 450px;
+    height: 350px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    padding: 23px 10px 32px 10px;
+}
+
+.blog-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    z-index: 0;
+    border-radius: 15px;
+}
+.blog-card h3,
+.blog-card .meta {
+    position: relative;
+    z-index: 1;
+    bottom: 23px;
+    text-align: center; 
+    
+}
+.h3{
+    font-size: 4.23rem;
+}
+
+.blog-card:hover {
+    /* transform: translateY(-10px); */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.card-button {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top: auto;
+}
+a {
+    text-decoration: none; /* Remove underline for all links */
+    color: inherit;        /* Optional: Use the inherited color */
+}
+.card-button .btn {
+    
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.card-button .btn:hover {
+    align-items: center;
+    background-color: #388e3c;
+    transform: scale(1.1);
+}
+
+/* Category Tags */
+
+/* Normal Blogs */
+.normal-blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center; /* Centers the grid items horizontally */
+    max-width: 1200px;  /* Maximum width for the grid */
+    margin: 0 auto;  /* Center the grid on the page */
+    padding: 20px;
+}
+
+.blog-card p {
+    color: #555;
+    font-size: 16px;
+    margin-top: 10px;
+}
+/* individual blog page */
+.meta .categories {
+    text-align: center;
+    font-weight: bold;
+    color: #4caf50;  /* Green color for category */
+}
+.meta {
+    gap: 10px;                    /* Space between each meta item */
+    font-size: 14px;
+    color: #888;
+    align-items: center;          /* Vertically center align */
+    margin-top: 5px;
+    font-size: 14px;
+    color: #888;
+    justify-content: center;
+    display: column;                /* Use Flexbox */    
+   
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+/* Footer Section */
+.blog-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.footer-navigation .nav-link {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.footer-navigation .nav-link:hover {
+    color: #0056b3;
+}
+
+.social-media-sharing {
+    text-align: right;
+}
+
+.social-media-sharing h3 {
+    margin-bottom: 10px;
+}
+
+.social-media-sharing .social-icon {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.social-media-sharing .social-icon img {
+    width: 24px;
+    height: 24px;
+}
+@media (max-width: 1024px) {
+    .featured-blogs {
+        flex-direction: column;
+    }
+
+    .blog-card {
+        flex: 1 1 100%;
+        height: auto;
+    }
+
+    .banner h1 {
+        font-size: 2.2em;
+    }
+
+    .blog-listings h2 {
+        font-size: 2em;
+    }
+
+    .card-button .btn {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-blogs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-card {
+        flex: 1 1 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .banner h1 {
+        font-size: 2em;
+    }
+
+    .blog-listings h2 {
+        font-size: 1.8em;
+    }
+
+    .blog-footer .footer-navigation a {
+        font-size: 1.1em;
+    }
+
+    .blog-footer .social-media-sharing img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 1.8em;
+    }
+
+    .blog-listings h2 {
+        font-size: 1.6em;
+    }
+
+    .blog-card {
+        padding: 10px;
+        height: auto;
+    }
+
+    .card-button .btn {
+        padding: 8px 15px;
+    }
+
+    .blog-footer .footer-navigation a {
+        font-size: 1em;
+    }
+
+    .blog-footer .social-media-sharing img {
+        width: 20px;
+        height: 20px;
+    }
+}
